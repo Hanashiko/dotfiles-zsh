@@ -61,11 +61,17 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
   sudo pkgfile --update
   ```
 
+- **zsh-interactive-cd** (для Arch):
+  ```bash
+  sudo pacman -S fzf
+  ```
+
 ### 3. Активувати конфіг
 
 ```bash
-ln -s ~/dotfiles-zsh/.zshrc ~/.zshrc
-ln -s ~/dotfiles-zsh/.p10k.zsh ~/.p10k.zsh
+cp ~/dotfiles-zsh/.zshrc ~/.zshrc
+cp ~/dotfiles-zsh/aliases.zsh ~/aliases.zsh
+cp ~/dotfiles-zsh/.p10k.zsh ~/.p10k.zsh
 chsh -s $(which zsh)
 ```
 

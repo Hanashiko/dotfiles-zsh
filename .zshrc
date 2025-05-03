@@ -18,6 +18,7 @@ plugins=(
   command-not-found
   alias-tips
   colored-man-pages
+  zsh-interactive-cd
 )
 
 # Ініціалізація oh-my-zsh
