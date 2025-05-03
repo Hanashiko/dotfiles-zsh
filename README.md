@@ -7,8 +7,7 @@
 ```
 ~/dotfiles-zsh/
 ├── .zshrc          # Основний конфігураційний файл для zsh
-├── .p10k.zsh       # Конфігурація для Powerlevel10k
-└── .oh-my-zsh/     # Oh My Zsh фреймворк (клонований локально)
+└── .p10k.zsh       # Конфігурація для Powerlevel10k
 ```
 
 ## ⚙️ Особливості
@@ -36,17 +35,24 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 
 ### 2. Встановити залежності
 
-- **Zsh**: `sudo pacman -S zsh` (або для іншого дистрибутиву)
-- **Oh My Zsh**: [ohmyz.sh/#install](https://ohmyz.sh/#install)
+- **Zsh**: 
+  ```bash
+  sudo pacman -S zsh
+  ```
+ > (або для іншого дистрибутиву)
+- **Oh My Zsh**: 
+  ```bash
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
 - **Powerlevel10k**:
   ```bash
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
   ```
 
 - **Плагіни**:
   ```bash
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
 
 - **command-not-found** (для Arch):
