@@ -7,6 +7,7 @@
 ```
 ~/dotfiles-zsh/
 ├── .zshrc          # Основний конфігураційний файл для zsh
+├── aliases.zsh     # Скорочення термінальних команд
 └── .p10k.zsh       # Конфігурація для Powerlevel10k
 ```
 
@@ -25,6 +26,9 @@
 
 - **Кольоровий `ls`, grep, автодоповнення, історія, PATH, LANG**
 
+Зовнішній вигляд
+![Preview](./preview.png)
+
 ## 🧩 Встановлення
 
 ### 1. Клонування репозиторію
@@ -39,7 +43,6 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
   ```bash
   sudo pacman -S zsh
   ```
- > (або для іншого дистрибутиву)
 - **Oh My Zsh**: 
   ```bash
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
