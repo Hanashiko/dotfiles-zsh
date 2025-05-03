@@ -3,7 +3,7 @@
 # 📁 Файлова система
 alias ll='ls -lah --color=auto'
 alias la='ls -A'
-alias mkdir='mkdir -pV'
+alias mkdir='mkdir -pv'
 
 # 🧠 Git
 alias gs='git status'
@@ -58,7 +58,7 @@ alias h='history | grep'     # приклад: h ssh
 alias c='clear'
 alias now='date +"%T"'
 alias weather='curl wttr.in'
-alias myip='curl ifconfig.me'
+alias myip='curl ifconfig.co'
 alias reload!='source ~/.zshrc'
 
 # 🐍 Python
