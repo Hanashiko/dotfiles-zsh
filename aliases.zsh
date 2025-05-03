@@ -67,6 +67,7 @@ alias act='source venv/bin/activate'
 alias pipup='pip list --outdated'
 alias pipreq='pip freeze > requirements.txt'
 alias runpy='python main.py'
+alias pipi='pip install'
 
 # 🐘 PHP / Composer
 alias cinstall='composer install'
