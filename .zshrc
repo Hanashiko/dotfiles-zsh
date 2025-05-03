@@ -27,7 +27,7 @@ source $ZSH/oh-my-zsh.sh
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # Завантажуємо кастомні alias
-source ~/dotfiles-zsh/aliases.zsh
+source ~/aliases.zsh
 
 # Зробити LS гарнішим
 export LS_COLORS="di=1;36:fi=0:ln=1;35:pi=40;33:so=1;35:bd=1;33:cd=1;33:or=1;31:ex=1;32"
