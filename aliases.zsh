@@ -65,6 +65,21 @@ alias search='pacman -Ss'
 alias pks='pacman -Ss'
 alias ys='yay -S'
 
+# 🐳 Docker
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dstop='docker stop $(docker ps -q)'
+alias drm='docker rm $(docker ps -a -q)'
+alias drmi='docker rmi $(docker images -q)'
+alias dimg='docker images'
+alias dsh='docker exec -it'
+alias ds='docker stop'
+alias dk='docker start'
+alias dx='docker rm'
+alias dl='docker logs'
+alias dcu='docker compose up -d'
+alias dcb='docker compose down'
+
 # 🔧 Git
 alias gs='git status'
 alias ga='git add'
