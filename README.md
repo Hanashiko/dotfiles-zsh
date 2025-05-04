@@ -103,11 +103,11 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 | `....` | `cd ../../..` | Перейти на три рівні вище | `....` |
 | `c` | `clear` | Очистити термінал | `c` |
 | `dfh` | `df -hT` | Показати інформацію про диски | `dfh` |
-| `duh` | `du -sh * | sort -h` | Показати розмір тек | `duh` |
+| `duh` | `du -sh * \| sort -h` | Показати розмір тек | `duh` |
 | `ff` | `find . -name` | Знайти файл за іменем | `ff "*.zsh"` |
 | `perm` | `stat -c "%A %n" *` | Показати права доступу до файлів | `perm` |
 | `chmodx` | `chmod +x` | Зробити файл виконуваним | `chmodx script.sh` |
-| `mounts` | `mount | column -t` | Показати змонтовані файлові системи | `mounts` |
+| `mounts` | `mount \| column -t` | Показати змонтовані файлові системи | `mounts` |
 | `lsblkf` | `lsblk -f` | Показати інформацію про блочні пристрої | `lsblkf` |
 
 ---
@@ -128,7 +128,7 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 | `scedit` | `sudo systemctl edit --full` | Редагувати конфіг юніту | `scedit sshd` |
 | `jctl` | `journalctl -xe` | Журнал systemd | `jctl` |
 | `jctlf` | `journalctl -xe -f` | Журнал в режимі реального часу | `jctlf` |
-| `kernlog` | `sudo dmesg -T | less` | Показати ядрові повідомлення | `kernlog` |
+| `kernlog` | `sudo dmesg -T \| less` | Показати ядрові повідомлення | `kernlog` |
 | `ssda` | `systemd-analyze` | Проаналізувати час завантаження | `ssda` |
 | `mem` | `free -h` | Показати використання памʼяті | `mem` |
 | `cpu` | `lscpu` | Показати інформацію про CPU | `cpu` |
@@ -153,10 +153,10 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 ### 🧵 Lsof / Порти / Відкриті файли
 | Аліас | Команда | Опис | Приклад |
 |-------|---------|------|---------|
-| `lsofports` | `sudo lsof -i -P -n | grep LISTEN` | Відкриті порти | `lsofports` |
+| `lsofports` | `sudo lsof -i -P -n \| grep LISTEN` | Відкриті порти | `lsofports` |
 | `lsofport` | `f(){ sudo lsof -i :$1 ; }; f` | Файли для конкретного порту | `lsofport 80` |
 | `lsofme` | `lsof -u $USER` | Файли користувача | `lsofme` |
-| `lsoff` | `f(){ lsof | grep "$1" ; }; f` | Пошук файлів за шаблоном | `lsoff config` |
+| `lsoff` | `f(){ lsof \| grep "$1" ; }; f` | Пошук файлів за шаблоном | `lsoff config` |
 | `lsofsock` | `lsof -i` | Всі сокети | `lsofsock` |
 | `lsofp` | `f(){ lsof -p $1 ; }; f` | Файли процесу за PID | `lsofp 1234` |
 
@@ -302,7 +302,7 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 | `userslist` | `cur -d: -f1 /etc/passwd` | Список користувачів | `userslist` |
 | `groupsme` | `groups $(whoami)` | Групи поточного користувача | `groupsme` |
 | `passwdpol` | `chage -l $(whoami)` | Політика паролів | `passwdpol` |
-| `sulog` | `lastlog | grep -v "Never logged in"` | Логи входів користувачів | `sulog` |
+| `sulog` | `lastlog \| grep -v "Never logged in"` | Логи входів користувачів | `sulog` |
 
 ---
 
