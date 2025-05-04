@@ -19,6 +19,9 @@ plugins=(
   alias-tips
   colored-man-pages
   zsh-interactive-cd
+  copyfile
+  copypath
+  docker
 )
 
 # Ініціалізація oh-my-zsh

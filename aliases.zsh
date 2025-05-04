@@ -65,21 +65,6 @@ alias search='pacman -Ss'
 alias pks='pacman -Ss'
 alias ys='yay -S'
 
-# 🐳 Docker
-alias dps='docker ps'
-alias dpsa='docker ps -a'
-alias dstop='docker stop $(docker ps -q)'
-alias drm='docker rm $(docker ps -a -q)'
-alias drmi='docker rmi $(docker images -q)'
-alias dimg='docker images'
-alias dsh='docker exec -it'
-alias ds='docker stop'
-alias dk='docker start'
-alias dx='docker rm'
-alias dl='docker logs'
-alias dcu='docker compose up -d'
-alias dcb='docker compose down'
-
 # 🔧 Git
 alias gs='git status'
 alias ga='git add'
@@ -133,7 +118,7 @@ alias extract='a(){
         case "$1" in
             *.tar.bz2) tar xjf "$1" ;;
             *.tar.gz) tar xzf "$1" ;;
-            *bz2) bunzip2 "$1" ;;
+            *.bz2) bunzip2 "$1" ;;
             *.rar) unrar x "$1" ;;
             *.gz) gunzip "$1" ;;
             *.tar) tar xf "$1" ;;
