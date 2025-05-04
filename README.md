@@ -253,12 +253,11 @@ chsh -s $(which zsh)
 ### 🗂 Конфіг файли
 | Аліас | Команда | Опис | Приклад |
 |-------|---------|------|---------|
-| `nv` | `nvim` | Запустити текстовий редактор | `nv ~/.zshrc` |
-| `nvimconf` | `nv ~/.config/nvim` | Відкрити конфіг Neovim | `nvimconf` |
-| `zshconf` | `nv ~/.zshrc` | Відкрити zsh-конфіг | `zshconf` |
-| `bashconf` | `nv ~/.bashrc` | Відкрити bash-конфіг | `bashconf` |
-| `i3conf` | `nv ~/.config/i3/config` | Конфіг для i3 window manager | `i3conf` |
-| `polyconf` | `nv ~/.config/polybar/config.ini` | Конфіг для Polybar | `polyconf` |
+| `nvimconf` | `nvim ~/.config/nvim` | Відкрити конфіг Neovim | `nvimconf` |
+| `zshconf` | `nvim ~/.zshrc` | Відкрити zsh-конфіг | `zshconf` |
+| `bashconf` | `nvim ~/.bashrc` | Відкрити bash-конфіг | `bashconf` |
+| `i3conf` | `nvim ~/.config/i3/config` | Конфіг для i3 window manager | `i3conf` |
+| `polyconf` | `nvim ~/.config/polybar/config.ini` | Конфіг для Polybar | `polyconf` |
 
 ---
 

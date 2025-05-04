@@ -121,12 +121,11 @@ alias mindex='bin/magento indexer:reindex'
 alias murl='bin/magento config:set web/unsecure/base_url'
 
 # 🗂️ Конфіг файли
-alias nv='nvim' # Можна змінити термінальний текстовий редактор для конфігів
-alias nvimconf='nv ~/.config/nvim'
-alias zshconf='nv ~/.zshrc'
-alias bashconf='nv ~/.bashrc'
-alias i3conf='nv ~/.config/i3/config'
-alias polyconf='nv ~/.config/polybar/config.ini'
+alias nvimconf='nvim ~/.config/nvim'
+alias zshconf='nvim ~/.zshrc'
+alias bashconf='nvim ~/.bashrc'
+alias i3conf='nvim ~/.config/i3/config'
+alias polyconf='nvim ~/.config/polybar/config.ini'
 
 # 📦 Архівація / Розархівація
 alias extract='a(){
