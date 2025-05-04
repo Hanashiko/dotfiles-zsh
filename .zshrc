@@ -62,6 +62,9 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# Відобразити README.sh 
+#/bin/bash /home/dev/README.sh
+
 # PATH
 export PATH=$HOME/.local/bin:$PATH
 
