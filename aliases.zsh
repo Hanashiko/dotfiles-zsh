@@ -19,6 +19,8 @@ alias gd='git diff'
 alias gr='git remote'
 alias gcl='git clone'
 alias gb='git branch'
+alias gpl='git pull origin $(git branch --show-current)'
+alias gps='git push origin $(git branch --show-current)'
 
 # 🐳 Docker
 alias dps='docker ps'
@@ -47,9 +49,13 @@ alias fuck='sudo $(fc -ln -1)'
 # 🖥️ Система (Arch / Pacman)
 alias update='sudo pacman -Syyu'
 alias install='sudo pacman -S'
+alias pki='sudo pacman -S'
+alias ys='yay -S'
 alias remove='sudo pacman -Rns'
+alias pkr='sudo pacman -Rns'
 alias orphan='sudo pacman -Rns $(pacman -Qdtq)'
 alias search='pacman -Ss'
+alias pks='pacman -Ss'
 
 # ⚙️ Системне
 alias c='clear'
@@ -81,6 +87,9 @@ alias ssda='systemd-analyze'
 alias mem='free -h' #перегляд використання оперативної пам'яті
 alias ipi='ip -br a' # стисла інфа про інтерфейси
 alias pingg='ping 8.8.8.8'
+alias k9='kill -9'
+alias pkf='pkill -f'
+alias myprocs='ps -u $(whoami)'
 
 # ⚔️ Права та користувачі
 alias userslist='cut -d: -f1 /etc/passwd'
@@ -140,6 +149,7 @@ alias ungz='tar -xzvf' # розпаковуємо .tar.gz
 # ⚡️Конфіги
 alias nvimconf='nvim ~/.config/nvim'
 alias zshconf='nvim ~/.zshrc'
+alias bashconf='nvim ~/.bashrc'
 alias i3conf='nvim ~/.config/i3/config'
 alias polyconf='nvim ~/.config/polybar/config.ini'
 
@@ -156,6 +166,7 @@ alias pipup='pip list --outdated'
 alias pipreq='pip freeze > requirements.txt'
 alias runpy='python main.py'
 alias pipi='pip install'
+alias pyfmt='black . && isort .'
 
 # 🐘 PHP / Composer
 alias cinstall='composer install'
