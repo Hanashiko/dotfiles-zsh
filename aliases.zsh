@@ -62,6 +62,7 @@ alias lsofme='lsof -u $USER' # показати всі відкриті файл
 alias lsoff='f(){ lsof | grep "$1" ; }; f' #знайти який процес тримає файл
 alias lsofsock='lsof -i' #показати всі відкриті сокети
 alias lsofp='f(){ lsof -p $1 ; }; f' #показати всі файли відкриті конкретний процесом (PID)
+alias portscan='nmap -p- 127.0.0.1'
 alias sc='systemctl'
 alias scu='systemctl --user'
 alias scs='systemctl status'
@@ -75,10 +76,19 @@ alias sclist='systemctl list-units --type=service'
 alias scedit='sudo systemctl edit --full'
 alias jctl='journalctl -xe'
 alias jctlf='journalctl -xe -f'
+alias kernlog='sudo dmesg -T | less'
 alias ssda='systemd-analyze'
 alias mem='free -h' #перегляд використання оперативної пам'яті
 alias ipi='ip -br a' # стисла інфа про інтерфейси
 alias pingg='ping 8.8.8.8'
+
+# ⚔️ Права та користувачі
+alias userslist='cut -d: -f1 /etc/passwd'
+alias groupsme='groups $(whoami)'
+alias perm='stat -c "%A %n" *'
+alias chmodx='chmod +x'
+alias passwdpol='chage -l $(whoami)'
+alias sulog='lastlog | grep -v "Never logged in"'
 
 # ⚖️ Статистика системи
 alias cpu='lscpu'
@@ -91,6 +101,7 @@ alias ff='find . -name'       # приклад: ff "*.zsh"
 alias h='history | grep'     # приклад: h ssh
 alias which='command -v'
 alias grepv='grep -rni' # приклад: grepv alias ./
+alias todo='grep -rni TODO .'
 
 # 📦 Misc
 alias now='date +"%T"'
