@@ -95,6 +95,7 @@ alias gd='git diff'
 alias gr='git remote'
 alias gcl='git clone'
 alias gb='git branch'
+alias gba='git branch -a'
 alias gpl='git pull origin $(git branch --show-current)'
 alias gps='git push origin $(git branch --show-current)'
 
@@ -122,6 +123,7 @@ alias mindex='bin/magento indexer:reindex'
 alias murl='bin/magento config:set web/unsecure/base_url'
 
 # 🗂️ Конфіг файли
+alias rdme='nvim ./README.md'
 alias nvimconf='nvim ~/.config/nvim'
 alias zshconf='nvim ~/.zshrc'
 alias bashconf='nvim ~/.bashrc'

@@ -213,6 +213,7 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 | `gr` | `git remote` | Керування віддаленими репозиторіями | `gr -v` |
 | `gcl` | `git clone` | Клонувати репозиторій | `gcl https://github.com/user/repo.git` |
 | `gb` | `git branch` | Список гілок | `gb` |
+| `gba` | `git branch -a` | Список всіх гілок | `gba` |
 | `gpl` | `git pull origin $(git branch --show-current)` | Завантажити зміни з origin | `gpl` |
 | `gps` | `git push origin $(git branch --show-current)` | Відправити зміни в origin | `gps` |
 
@@ -256,6 +257,7 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 ### 🗂 Конфіг файли
 | Аліас | Команда | Опис | Приклад |
 |-------|---------|------|---------|
+| `rdme` | `nvim ./README.md` | Редагувати README.md файл в нинішнія дерикторії | `rdme` |
 | `nvimconf` | `nvim ~/.config/nvim` | Відкрити конфіг Neovim | `nvimconf` |
 | `zshconf` | `nvim ~/.zshrc` | Відкрити zsh-конфіг | `zshconf` |
 | `bashconf` | `nvim ~/.bashrc` | Відкрити bash-конфіг | `bashconf` |
