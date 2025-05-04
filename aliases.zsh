@@ -48,12 +48,13 @@ alias fuck='sudo $(fc -ln -1)'
 alias update='sudo pacman -Syyu'
 alias install='sudo pacman -S'
 alias remove='sudo pacman -Rns'
-alias cleanup='sudo pacman -Rns $(pacman -Qdtq)'
+alias orphan='sudo pacman -Rns $(pacman -Qdtq)'
+alias search='pacman -Ss'
 
 # ⚙️ Системне
 alias c='clear'
-alias dfh='df -h'
-alias duh='du -h --max-depth=1'
+alias dfh='df -hT'
+alias duh='du -sh * | sort -h'
 alias pgs='pgrep -laf'
 alias lsofports='sudo lsof -i -P -n | grep LISTEN' # показати всі порти які слухають
 alias lsofport='f(){ sudo lsof -i :$1 ; }; f' #показати шо слухає конкретний порт
@@ -69,20 +70,39 @@ alias scd='sudo systemctl disable'
 alias scr='sudo systemctl restart'
 alias scsrt='sudo systemctl start'
 alias scstp='sudo systemctl stop'
+alias scfail='systemctl --failed'
+alias sclist='systemctl list-units --type=service'
+alias scedit='sudo systemctl edit --full'
 alias jctl='journalctl -xe'
 alias jctlf='journalctl -xe -f'
 alias ssda='systemd-analyze'
+alias mem='free -h' #перегляд використання оперативної пам'яті
+alias ipi='ip -br a' # стисла інфа про інтерфейси
+alias pingg='ping 8.8.8.8'
+
+# ⚖️ Статистика системи
+alias cpu='lscpu'
+alias temps='sensors'
+alias mounts='mount | column -t'
+alias lsblkf='lsblk -f'
 
 # 🔎 Пошук і перегляд
-alias f='find . -name'       # приклад: f "*.zsh"
+alias ff='find . -name'       # приклад: ff "*.zsh"
 alias h='history | grep'     # приклад: h ssh
 alias which='command -v'
+alias grepv='grep -rni' # приклад: grepv alias ./
 
 # 📦 Misc
 alias now='date +"%T"'
+alias timestamp='date "+%Y-%m-%d %H:%M:%S"'
+alias today='date +"%Y-%m-%d"'
+alias week='date +%V'
 alias weather='curl wttr.in'
 alias myip='curl ifconfig.co'
 alias reload!='source ~/.zshrc'
+alias nv='nvim'
+
+# 🧳Архіви
 alias extract='a(){
     if [ -f "$1" ]; then
         case "$1" in
@@ -103,6 +123,14 @@ alias extract='a(){
         echo "'$1' does not exists."
     fi
 }; a'
+alias gz='tar -czvf' # створюємо .tar.gz
+alias ungz='tar -xzvf' # розпаковуємо .tar.gz
+
+# ⚡️Конфіги
+alias nvimconf='nvim ~/.config/nvim'
+alias zshconf='nvim ~/.zshrc'
+alias i3conf='nvim ~/.config/i3/config'
+alias polyconf='nvim ~/.config/polybar/config.ini'
 
 # 🔥 Приколи
 alias shrug='echo ¯\\\_(ツ)\_/¯'
@@ -111,7 +139,7 @@ alias flip='echo "(╯°□°）╯︵ ┻━┻"'
 alias unflip='echo "┬─┬ ノ( ゜-゜ノ)"'
 
 # 🐍 Python
-alias venv='python -m venv venv'
+alias venv='python3 -m venv venv && source venv/bin/activate'
 alias act='source venv/bin/activate'
 alias pipup='pip list --outdated'
 alias pipreq='pip freeze > requirements.txt'
