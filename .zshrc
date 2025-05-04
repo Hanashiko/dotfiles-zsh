@@ -21,9 +21,6 @@ plugins=(
   zsh-interactive-cd
   copyfile
   copypath
-  docker
-  docker-compose
-  history
 )
 
 # Ініціалізація oh-my-zsh

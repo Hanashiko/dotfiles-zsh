@@ -79,6 +79,7 @@ alias dx='docker rm'
 alias dl='docker logs'
 alias dcu='docker compose up -d'
 alias dcb='docker compose down'
+alias dcl='docker compose logs'
 
 # 🔧 Git
 alias gs='git status'
@@ -160,6 +161,9 @@ alias today='date +"%Y-%m-%d"'
 alias week='date +%V'
 
 # 🔍 Пошук та історія
+alias h='history'
+alias hl='history | less'
+alias hs='history | grep'
 alias grepv='grep -rni'          # приклад: grepv alias ./
 alias todo='grep -rni TODO .'
 
