@@ -32,12 +32,21 @@
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
     # os_icon               # os identifier
+    # docker_tag
+    # server_tag
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
     newline                 # \n
     prompt_char             # prompt symbol
   )
+
+  function prompt_server_tag() {
+    p10k segment -t '(server)' -f green -b ''
+  }
+  function prompt_docker_tag() {
+    p10k segment -t '(docker)' -f green -b ''
+  }
 
   # The list of segments shown on the right. Fill it with less important segments.
   # Right prompt on the last prompt line (where you are typing your commands) gets
