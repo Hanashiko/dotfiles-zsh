@@ -71,6 +71,7 @@ alias scsrt='sudo systemctl start'
 alias scstp='sudo systemctl stop'
 alias jctl='journalctl -xe'
 alias jctlf='journalctl -xe -f'
+alias ssda='systemd-analyze'
 
 # 🔎 Пошук і перегляд
 alias f='find . -name'       # приклад: f "*.zsh"
