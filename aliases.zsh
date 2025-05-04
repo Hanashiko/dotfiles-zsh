@@ -149,7 +149,7 @@ alias extract='a(){
         echo "'$1' does not exists."
     fi
 }; a'
-alias gz='f() { tar -czvf "$1.tar.gz" "$1{@:2}"; }; f'
+alias gzit='f() { tar -czvf "$1.tar.gz" "$1{@:2}"; }; f'
 alias tarit='f() { tar -cvf "$1.tar" "${@:2}"; }; f'
 
 # 📅 Дата та час
