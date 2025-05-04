@@ -193,6 +193,7 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 | `dl` | `docker logs` | Показати логи | `dl mycontainer` |
 | `dcu` | `docker compose up -d` | Запустити docker compose | `dcu` |
 | `dcb` | `docker compose down` | Зупинити docker compose | `dcb` |
+| `dcl` | `docker compose logs` | Переглянути логи docker compose | `dcl mycontainer` |
 
 ---
 
@@ -260,6 +261,8 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 | `bashconf` | `nvim ~/.bashrc` | Відкрити bash-конфіг | `bashconf` |
 | `i3conf` | `nvim ~/.config/i3/config` | Конфіг для i3 window manager | `i3conf` |
 | `polyconf` | `nvim ~/.config/polybar/config.ini` | Конфіг для Polybar | `polyconf` |
+| `aliasconf` | `nvim ~/aliases.zsh` | Відкрити конфіг з переліком кастомних alias'ів | `aliasconf` |
+| `p10kconf` | `nvim ~/.p10k.zsh` | Відкрити powerlevel10k-конфіг | `p10kconf` |
 
 ---
 
@@ -285,7 +288,9 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 ### 🔍 Пошук та історія
 | Аліас | Команда | Опис | Приклад |
 |-------|---------|------|---------|
-| `h` | `history | grep` | Пошук в історії команд | `h ssh` |
+| `h` | `history` | Переглянути історію команд | `h` |
+| `hl` | `history \| less` | Переглянути історію команд через less | `hl` |
+| `hs` | `history grep` | Пошук в іторії команд | `hs` |
 | `grepv` | `grep -rni` | Рекурсивний grep з номером рядка | `grepv alias ./` |
 | `todo` | `grep -rni TODO .` | Пошук TODO по всьому проєкту | `todo` |
 
