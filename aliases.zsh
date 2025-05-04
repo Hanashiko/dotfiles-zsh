@@ -111,6 +111,8 @@ alias zshconf='nvim ~/.zshrc'
 alias bashconf='nvim ~/.bashrc'
 alias i3conf='nvim ~/.config/i3/config'
 alias polyconf='nvim ~/.config/polybar/config.ini'
+alias aliasconf='nvim ~/aliases.zsh'
+alias p10kconf='nvim ~/.p10k.zsh'
 
 # 📦 Архівація / Розархівація
 alias extract='a(){
@@ -143,7 +145,6 @@ alias today='date +"%Y-%m-%d"'
 alias week='date +%V'
 
 # 🔍 Пошук та історія
-alias h='history | grep'         # приклад: h ssh
 alias grepv='grep -rni'          # приклад: grepv alias ./
 alias todo='grep -rni TODO .'
 
