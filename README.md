@@ -72,12 +72,13 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 
 ### 3. Активувати конфіг
 
-```bash
-cp ~/dotfiles-zsh/.zshrc ~/.zshrc
-cp ~/dotfiles-zsh/aliases.zsh ~/aliases.zsh
-cp ~/dotfiles-zsh/.p10k.zsh ~/.p10k.zsh
-chsh -s $(which zsh)
-```
+  ```bash
+  cp ~/dotfiles-zsh/.zshrc ~/.zshrc
+  cp ~/dotfiles-zsh/aliases.zsh ~/aliases.zsh
+  cp ~/dotfiles-zsh/.p10k.zsh ~/.p10k.zsh
+  chsh -s $(which zsh)
+  source ~/.zshrc
+  ```
 
 Перезапусти термінал.
 
