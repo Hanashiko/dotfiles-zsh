@@ -21,6 +21,7 @@ plugins=(
   zsh-interactive-cd
   copyfile
   copypath
+  aliases
 )
 
 # Ініціалізація oh-my-zsh
