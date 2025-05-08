@@ -12,7 +12,7 @@ alias dfh='df -hT'
 alias duh='du -sh * | sort -h'
 alias ff='find . -name'             # приклад: ff "*.zsh"
 alias perm='stat -c "%A %n" *'
-alias chmodx='chmod +x'
+alias chmodx='sudo chmod +x'
 alias mounts='mount | column -t'
 alias lsblkf='lsblk -f'
 
