@@ -1,28 +1,14 @@
 # Кольорова схема TokyoNight
-tn_bg_dark='#1f2335'
-tn_bd='#24283b'
-tn_bg_light='#292e42'
-tn_bg_highlight='#3b4261'
-tn_border='#414868'
-tn_fg_dim='#545c7e'
-tn_fg_med='#565f89'
-tn_fg='#a9b1d6'
-tn_fg_light='#c0caf5'
-tn_gray='#394b70'
-tn_blue_dark='#3d59a1'
-tn_blue='#7aa2f7'
-tn_cyan='#7dcfff'
-tn_cyan_light='#b4f9f8'
-tn_purple_light='#bb9af7'
-tn_purple='#9d7cd8'
-tn_orange='#ff9e64'
-tn_yellow='#ffc777'
-tn_green='#c3e88d'
-tn_teal='#4fd6be'
-tn_aqua='#41a6b5'
-tn_red_light='#ff757f'
-tn_red_dark='#c53b53'
-tn_pink='#ff007c'
+background='#1a1b26'
+foreground='#a9b1d6'
+black='#32344a'
+blue='#7aa2f7'
+cyan='#449dab'
+green='#9ece6a'
+magenta='#ad8ee6'
+red='#f7768e'
+white='#787c99'
+yellow='#e0af68'
 
 # Тимчасово змінює опції оболонки
 'builtin' 'local' '-a' 'p10k_config_opts'
@@ -92,19 +78,19 @@ tn_pink='#ff007c'
 
   typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR=' '
 
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VIINS_FOREGROUND=$tn_purple
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VIINS_FOREGROUND=$tn_pink
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VIINS_FOREGROUND=$magenta
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VIINS_FOREGROUND=$red
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OVERWRITE_STATE=false
   typeset -g POWERLEVEL9K_PROMPT_CHAR_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
   typeset -g POWERLEVEL9K_PROMPT_CHAR_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL=
 
   # dir
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$tn_aqua
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$cyan
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER='…'
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=$tn_teal
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=$tn_aqua
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=$blue
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=$cyan
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   local anchor_files=(
     .bzr
@@ -155,17 +141,17 @@ tn_pink='#ff007c'
     fi
 
     if (( $1 )); then
-      local       meta="%F{$tn_purple}"
-      local      clean="%F{$tn_green}" 
-      local   modified="%F{$tn_yellow}" 
-      local  untracked="%F{$tn_blue}"   
-      local conflicted="%F{$tn_red_light}" 
+      local       meta="%F{$magenta}"
+      local      clean="%F{$green}" 
+      local   modified="%F{$yellow}" 
+      local  untracked="%F{$blue}"   
+      local conflicted="%F{$red}" 
     else
-      local       meta="%F{$tn_fg}"
-      local      clean="%F{$tn_fg}"
-      local   modified="%F{$tn_fg}"
-      local  untracked="%F{$tn_fg}"
-      local conflicted="%F{$tn_fg}"
+      local       meta="%F{$foreground}"
+      local      clean="%F{$foreground}"
+      local   modified="%F{$foreground}"
+      local  untracked="%F{$foreground}"
+      local conflicted="%F{$foreground}"
     fi
 
     local res
@@ -224,84 +210,84 @@ tn_pink='#ff007c'
   typeset -g POWERLEVEL9K_VCS_LOADING_CONTENT_EXPANSION='${$((my_git_formatter(0)))+${my_git_format}}'
   typeset -g POWERLEVEL9K_VCS_{STAGED,UNSTAGED,UNTRACKED,CONFLICTED,COMMITS_AHEAD,COMMITS_BEHIND}_MAX_NUM=-1
 
-  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_COLOR=$tn_orange
-  typeset -g POWERLEVEL9K_VCS_LOADING_VISUAL_IDENTIFIER_COLOR=$tn_fg
+  typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_COLOR=$magenta
+  typeset -g POWERLEVEL9K_VCS_LOADING_VISUAL_IDENTIFIER_COLOR=$foreground
   typeset -g POWERLEVEL9K_VCS_VISUAL_IDENTIFIER_EXPANSION=
 
   typeset -g POWERLEVEL9K_VCS_BACKENDS=(git)
 
-  typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=$tn_green
-  typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=$tn_red_light
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=$tn_yellow
+  typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=$green
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=$red
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=$yellow
 
   # status
   typeset -g POWERLEVEL9K_STATUS_EXTENDED_STATES=true
 
   typeset -g POWERLEVEL9K_STATUS_OK=false
-  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=$tn_green
+  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=$green
   typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE=true
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=$tn_green
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=$green
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION='✔'
 
   typeset -g POWERLEVEL9K_STATUS_ERROR=true
-  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=$tn_red_light
+  typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=$red
   typeset -g POWERLEVEL9K_STATUS_ERROR_VISUAL_IDENTIFIER_EXPANSION='✘'
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL=true
-  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND=$tn_red_light
+  typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_FOREGROUND=$red
   typeset -g POWERLEVEL9K_STATUS_VERBOSE_SIGNAME=false
   typeset -g POWERLEVEL9K_STATUS_ERROR_SIGNAL_VISUAL_IDENTIFIER_EXPANSION='✘'
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE=true
-  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_FOREGROUND=$tn_red_light
+  typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_FOREGROUND=$red
   typeset -g POWERLEVEL9K_STATUS_ERROR_PIPE_VISUAL_IDENTIFIER_EXPANSION='✘'
 
   # todo
-  typeset -g POWERLEVEL9K_TODO_FOREGROUND=$tn_cyan_light
+  typeset -g POWERLEVEL9K_TODO_FOREGROUND=$cyan
   typeset -g POWERLEVEL9K_TODO_HIDE_ZERO_TOTAL=true
   typeset -g POWERLEVEL9K_TODO_HIDE_ZERO_FILTERED=false
 
   # context
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=
   
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=$tn_red_dark
-  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=$tn_purple
-  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=$tn_fg_dim     
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=$red
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=$magenta
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=$foreground
 
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%B%n@%m'
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n@%m'
 
   # virtualenv
-  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$tn_blue_dark
+  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$blue
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=true
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_WITH_PYENV=true
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
   typeset -g POWERLEVEL9K_VIRTUALENV_VISUAL_IDENTIFIER_EXPANSION='Py'
 
   # public ip
-  typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=$tn_orange
+  typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=$magenta
   typeset -g POWERLEVEL9K_PUBLIC_IP_VISUAL_IDENTIFIER_EXPANSION='IP'
  
   # ip
-  typeset -g POWERLEVEL9K_IP_FOREGROUND=$tn_aqua
-  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='$P9K_IP_IP${P9K_IP_RX_RATE:+ "%F{$tn_teal}"⇣$P9K_IP_RX_RATE}${P9K_IP_TX_RATE:+ "%F{$tn_teal}"⇡$P9K_IP_TX_RATE}'
+  typeset -g POWERLEVEL9K_IP_FOREGROUND=$magenta
+  typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='$P9K_IP_IP${P9K_IP_RX_RATE:+ "%F{$blue}"⇣$P9K_IP_RX_RATE}${P9K_IP_TX_RATE:+ "%F{$blue}"⇡$P9K_IP_TX_RATE}'
   typeset -g POWERLEVEL9K_IP_INTERFACE='[ew].*'
   typeset -g POWERLEVEL9K_IP_VISUAL_IDENTIFIER_EXPANSION='$P9K_IP_INTERFACE'
 
   # battery
   typeset -g POWERLEVEL9K_BATTERY_LOW_THRESHOLD=20
-  typeset -g POWERLEVEL9K_BATTERY_LOW_FOREGROUND=$tn_red_dark
-  typeset -g POWERLEVEL9K_BATTERY_{CHARGING,CHARGED}_FOREGROUND=$tn_green
-  typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=$tn_cyan
-  typeset -g POWERLEVEL9K_BATTERY_STAGES=("%F{$tn_cyan}▁" "%F{$tn_cyan}▂" "%F{$tn_cyan}▃" "%F{$tn_cyan}▄" "%F{$tn_cyan}▅" "%F{$tn_cyan}▆" "%F{$tn_cyan}▇" "%F{$tn_cyan}█")
+  typeset -g POWERLEVEL9K_BATTERY_LOW_FOREGROUND=$red
+  typeset -g POWERLEVEL9K_BATTERY_{CHARGING,CHARGED}_FOREGROUND=$green
+  typeset -g POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND=$cyan
+  typeset -g POWERLEVEL9K_BATTERY_STAGES=("%F{$cyan}▁" "%F{$cyan}▂" "%F{$cyan}▃" "%F{$cyan}▄" "%F{$cyan}▅" "%F{$cyan}▆" "%F{$cyan}▇" "%F{$cyan}█")
   typeset -g POWERLEVEL9K_BATTERY_VERBOSE=true
 
   # Кастомні елементи
   function prompt_server_tag() {
-    p10k segment -t '(server)' -f $tn_aqua -b ''
+    p10k segment -t '(server)' -f $blue -b ''
   }
   function prompt_docker_tag() {
-    p10k segment -t '(docker)' -f $tn_cyan -b ''
+    p10k segment -t '(docker)' -f $cyan -b ''
   }
 
   typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=same-dir
