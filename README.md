@@ -41,7 +41,10 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 
 - **Zsh**: 
   ```bash
+  # Arch
   sudo pacman -S zsh
+  # Debian/Ubuntu
+  sudo apt install zsh
   ```
 - **Oh My Zsh**: 
   ```bash
