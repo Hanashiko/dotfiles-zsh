@@ -132,6 +132,7 @@ alias polyconf='nvim ~/.config/polybar/config.ini'
 alias aliasconf='nvim ~/aliases.zsh'
 alias p10kconf='nvim ~/.p10k.zsh'
 alias alacrconf='nvim ~/.config/alacritty/alacritty.toml'
+alias sshconf='nvim ~/.ssh/config'
 
 # 📦 Архівація / Розархівація
 alias extract='a(){

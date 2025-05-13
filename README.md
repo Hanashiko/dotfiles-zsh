@@ -269,6 +269,7 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 | `aliasconf` | `nvim ~/aliases.zsh` | Відкрити конфіг з переліком кастомних alias'ів | `aliasconf` |
 | `p10kconf` | `nvim ~/.p10k.zsh` | Відкрити powerlevel10k-конфіг | `p10kconf` |
 | `alacrconf` | `nvim ~/.config/alacritty/alacritty.toml` | Відкрити alacritty-конфіг |
+| `sshconf` | `nvim ~/.ssh/config` | Відкрити ssh-конфіг | `sshconf` |
 
 ---
 
