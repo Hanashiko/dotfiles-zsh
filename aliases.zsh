@@ -84,7 +84,7 @@ alias dcl='docker compose logs'
 # 🔧 Git
 alias gs='git status'
 alias ga='git add'
-alias gaa='git add .'
+alias gaa='git add -A'
 alias gc='git commit'
 alias gcm='git commit -m'
 alias gp='git push'
@@ -98,6 +98,11 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gpl='git pull origin $(git branch --show-current)'
 alias gps='git push origin $(git branch --show-current)'
+gacp() {
+    git add .
+    git commit -m "$*"
+    git push
+}
 
 # 🐍 Python / Venv / Pip
 alias venv='python3 -m venv venv && source venv/bin/activate'
