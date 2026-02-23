@@ -238,22 +238,8 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 ### 🧰 Інші DevTools
 | Аліас | Команда | Опис | Приклад |
 |-------|---------|------|---------|
-| `cinstall` | `composer install` | Встановити залежності PHP | `cinstall` |
 | `reload!` | `source ~/.zshrc` | Перезавантажити конфіг zsh | `reload!` |
 | `which` | `command -v` | Показати шлях до команди | `which python` |
-
----
-
-### 🛠 Magento
-| Аліас | Команда | Опис | Приклад |
-|-------|---------|------|---------|
-| `mcc` | `bin/magento cache:clean` | Очистити кеш Magento | `mcc` |
-| `mccf` | `bin/magento cache:clean && bin/magento cache:flush` | Очистити та скинути кеш | `mccf` |
-| `mup` | `bin/magento setup:upgrade` | Оновити базу даних Magento | `mup` |
-| `mdi` | `bin/magento setup:di:compile` | Компільовка DI | `mdi` |
-| `mstatic` | `bin/magento setup:static-content:deploy -f` | Деплой статичних файлів | `mstatic` |
-| `mindex` | `bin/magento indexer:reindex` | Переіндексація | `mindex` |
-| `murl` | `bin/magento config:set web/unsecure/base_url` | Встановити базовий URL | `murl http://example.com/` |
 
 ---
 
@@ -316,12 +302,7 @@ git clone https://github.com/hanashiko/dotfiles-zsh.git ~/dotfiles-zsh
 ### 😎 Фанові / Забавні
 | Аліас | Команда | Опис | Приклад |
 |-------|---------|------|---------|
-| `please` | `sudo` | Ввічливий sudo | `please pacman -S cowsay` |
 | `fuck` | `sudo $(fc -ln -1)` | Повторити останню команду з sudo | `fuck` |
-| `shrug` | `echo ¯\\\_(ツ)\_/¯` | Смайлик shrug | `shrug` |
-| `wat` | `echo "ಠ_ಠ"` | Смайлик wat | `wat` |
-| `flip` | `echo "(╯°□°）╯︵ ┻━┻"` | Перевернутий стіл | `flip` |
-| `unflip` | `echo "┬─┬ ノ( ゜-゜ノ)"` | Повернення столу | `unflip` |
 | `weather` | `curl wttr.in` | Прогноз погоди | `weather` |
 
 ---

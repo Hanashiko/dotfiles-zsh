@@ -119,18 +119,8 @@ alias pipi='pip install'
 alias pyfmt='black . && isort .'
 
 # 🧰 Інші DevTools
-alias cinstall='composer install'
 alias reload!='source ~/.zshrc'
 alias which='command -v'
-
-# 🛠️ Magento
-alias mcc='bin/magento cache:clean'
-alias mccf='bin/magento cache:clean && bin/magento cache:flush'
-alias mup='bin/magento setup:upgrade'
-alias mdi='bin/magento setup:di:compile'
-alias mstatic='bin/magento setup:static-content:deploy -f'
-alias mindex='bin/magento indexer:reindex'
-alias murl='bin/magento config:set web/unsecure/base_url'
 
 # 🗂️ Конфіг файли
 alias rdme='nvim ./README.md'
@@ -188,12 +178,7 @@ alias passwdpol='chage -l $(whoami)'
 alias sulog='lastlog | grep -v "Never logged in"'
 
 # 😎 Фанові / Забавні
-alias please='sudo'
 alias fuck='sudo $(fc -ln -1)'
-alias shrug='echo ¯\\\_(ツ)\_/¯'
-alias wat='echo "ಠ_ಠ"'
-alias flip='echo "(╯°□°）╯︵ ┻━┻"'
-alias unflip='echo "┬─┬ ノ( ゜-゜ノ)"'
 alias weather='curl wttr.in'
 
 
