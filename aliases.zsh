@@ -98,10 +98,15 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gpl='git pull origin $(git branch --show-current)'
 alias gps='git push origin $(git branch --show-current)'
+alias glog='git log'
 gacp() {
-    git add .
+    git add -A
     git commit -m "$*"
-    git push
+    git push origin $(git branch --show-current)
+}
+gac() {
+    git add -A
+    git commit -m "$*"
 }
 
 # 🐍 Python / Venv / Pip
