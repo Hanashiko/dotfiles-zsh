@@ -181,4 +181,4 @@ alias sulog='lastlog | grep -v "Never logged in"'
 alias fuck='sudo $(fc -ln -1)'
 alias weather='curl wttr.in'
 
-
+alias back_obsid='zip -r HaniVault-$(date '+%d%m%Y').zip ./HaniVault'
