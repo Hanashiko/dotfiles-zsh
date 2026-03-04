@@ -22,6 +22,7 @@ plugins=(
   copyfile
   copypath
   aliases
+  kubectl
 )
 
 # Ініціалізація oh-my-zsh

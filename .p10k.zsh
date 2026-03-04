@@ -43,6 +43,7 @@ yellow='#e0af68'
     context
     todo        
     status
+    kubecontext
     # server_tag
     # docker_tag
     # newline
@@ -294,6 +295,18 @@ yellow='#e0af68'
   typeset -g POWERLEVEL9K_INSTANT_PROMPT=verbose
   typeset -g POWERLEVEL9K_DISABLE_HOT_RELOAD=true
 
+  # Kubernetis
+  typeset -g POWERLEVEL9K_KUBECONTEXT_CLASSES=(
+      '*prod*'  PROD
+      '*dev*'  DEV
+      '*'       DEFAULT)
+  typeset -g POWERLEVEL9K_KUBECONTEXT_DEFAULT_FOREGROUND=$foreground
+  typeset -g POWERLEVEL9K_KUBECONTEXT_PROD_FOREGROUND=$red
+  typeset -g POWERLEVEL9K_KUBECONTEXT_DEV_FOREGROUND=$cyan
+
+  local kube_expansion='${P9K_KUBECONTEXT_CLOUD_CLUSTER:-${P9K_KUBECONTEXT_NAME}}${${P9K_KUBECONTEXT_NAMESPACE:#default}:+/$P9K_KUBECONTEXT_NAMESPACE}'
+  typeset -g POWERLEVEL9K_KUBECONTEXT_PROD_CONTENT_EXPANSION=$kube_expansion
+  typeset -g POWERLEVEL9K_KUBECONTEXT_DEV_CONTENT_EXPANSION=$kube_expansion
   (( ! $+functions[p10k] )) || p10k reload
 }
 
@@ -301,3 +314,4 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
 (( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
 'builtin' 'unset' 'p10k_config_opts'
+
