@@ -157,6 +157,7 @@ alias extract='a(){
 }; a'
 alias gzit='f() { tar -czvf "$1.tar.gz" "$1{@:2}"; }; f'
 alias tarit='f() { tar -cvf "$1.tar" "${@:2}"; }; f'
+alias back_obsid='zip -r HaniVault-$(date '+%d%m%Y').zip ./HaniVault'
 
 # 📅 Дата та час
 alias now='date +"%T"'
@@ -180,5 +181,3 @@ alias sulog='lastlog | grep -v "Never logged in"'
 # 😎 Фанові / Забавні
 alias fuck='sudo $(fc -ln -1)'
 alias weather='curl wttr.in'
-
-alias back_obsid='zip -r HaniVault-$(date '+%d%m%Y').zip ./HaniVault'
